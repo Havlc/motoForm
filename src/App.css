@@ -4,3 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+
+th,
+td {
+  border: 1px solid steelblue;
+}
+
+tr:nth-child(even) {
+  background: lightblue;
+}
+
+TableRow {
+  color: pink;
+}

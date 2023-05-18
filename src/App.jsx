@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { FormForService } from './components/FormForService'
+import { DriverProfile } from './components/DriverProfile'
 import './App.css'
 
 function App() {
@@ -6,7 +8,8 @@ function App() {
 
   return (
     <>
-     
+      <FormForService />
+      <DriverProfile />
     </>
   )
 }
