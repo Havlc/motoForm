@@ -11,13 +11,13 @@ export function DriverProfile() {
                 </tr>
                 <DriverProfileRow title='Imię' value='Jan' />
                 <DriverProfileRow title='Kontakt' value='123456789' />
-
-                <tr style={{ background: 'orange' }}>
+                <DriverProfileRow title='Zdjęcie' value='miejsce na Twoje zdjęcie' />
+                <tr style={{ background: 'burlywood' }}>
                     <th>Lp</th>
                     <th>Nazwa</th>
-                    <th colSpan="2">Strona
-                        <td>L</td>
-                        <td>P</td>
+                    <th colSpan="1">Strona Lewa
+                    </th>
+                    <th colSpan="1">Strona Prawa
                     </th>
                     <th colSpan="3">Poziom
                         <td>1</td>
@@ -27,6 +27,7 @@ export function DriverProfile() {
 
                     <th>Zdjęcie</th>
                 </tr>
+                
             </thead>
             <tbody>
                 <DriverProfileDataRow lp={1} title='Wzrok' valueLeft={20} valueRight={70} levelOne={false} />
@@ -40,3 +41,18 @@ export function DriverProfile() {
         </table>
     )
 }
+
+/*<tr>
+                    <th></th>
+                    <th></th>
+                    <th colSpan="2" style={{ display: "flex" }}>
+                        <td style={{ flexDirection: "row-reverse" }}>L</td>
+                        <td>P</td>
+                    </th>
+                    <th colSpan="3">
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </th>
+                    <th></th>
+                </tr>*/
