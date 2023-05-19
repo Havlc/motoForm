@@ -3,24 +3,45 @@ export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne
         <tr>
             <th>{lp}</th>
             <th>{title}:</th>
-            <td style={valueLeft >= 70 ? {
+            <td>{valueLeft}
+            <div style={{width: "100px", borderColor: "steelblue", borderWidth: "1px", borderStyle: "solid", height: "10px"}}>
+                <div style={valueLeft >= 70 ? {
+                width: `${valueLeft}px`,
+                height: "8px",
                 borderColor: 'green',
-                color: 'green',
-                background: ' lightgreen'
+                borderWidth: "1px", 
+                borderStyle: "solid",
+                background: ' green'
             } : {
+                width: `${valueLeft}px`,
+                height: "8px",
                 borderColor: 'red',
-                color: 'red',
-                background: 'darkred'
-            }}>{valueLeft}</td>
-            <td style={valueRight >= 70 ? {
+                borderWidth: "1px", 
+                borderStyle: "solid",
+                background: 'red'
+            }}>
+                </div>
+                </div>
+            </td>
+            <td>{valueRight}<div style={{width: "100px", borderColor: "steelblue", borderWidth: "1px", borderStyle: "solid", height: "10px"}}>
+                <div style={valueRight >= 70 ? {
+                width: `${valueRight}px`,
+                height: "8px",
                 borderColor: 'green',
-                color: 'green',
-                background: ' lightgreen'
+                borderWidth: "1px", 
+                borderStyle: "solid",
+                background: ' green'
             } : {
+                width: `${valueRight}px`,
+                height: "8px",
                 borderColor: 'red',
-                color: 'red',
-                background: 'darkred'
-            }}>{valueRight}</td>
+                borderWidth: "1px", 
+                borderStyle: "solid",
+                background: 'red'
+            }}>
+                </div>
+                </div>
+                </td>
             <td style={levelOne ? {
                 borderColor: 'green',
                 color: 'green',
@@ -29,7 +50,7 @@ export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne
                 borderColor: 'red',
                 color: 'red',
                 background: 'darkred'
-            }}>O</td>
+            }}>{levelOne?'':'O'}</td>
             <td style={levelTwo ? {
                 borderColor: 'green',
                 color: 'green',
@@ -38,7 +59,7 @@ export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne
                 borderColor: 'red',
                 color: 'red',
                 background: 'darkred'
-            }}>O</td>
+            }}>{levelTwo?'':'O'}</td>
             <td style={levelThree ? {
                 borderColor: 'green',
                 color: 'green',
@@ -47,7 +68,7 @@ export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne
                 borderColor: 'red',
                 color: 'red',
                 background: 'darkred'
-            }}>O</td>
+            }}>{levelThree?'':'O'}</td>
         </tr>
     )
 }
