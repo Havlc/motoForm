@@ -1,4 +1,4 @@
-export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne, levelTwo,levelThree }) {
+export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne, levelTwo,levelThree, url }) {
     return (
         <tr>
             <th>{lp}</th>
@@ -8,10 +8,10 @@ export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne
                 <div style={valueLeft >= 70 ? {
                 width: `${valueLeft}px`,
                 height: "8px",
-                borderColor: 'green',
+                borderColor: 'lightgreen',
                 borderWidth: "1px", 
                 borderStyle: "solid",
-                background: ' green'
+                background: ' lightgreen'
             } : {
                 width: `${valueLeft}px`,
                 height: "8px",
@@ -27,10 +27,10 @@ export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne
                 <div style={valueRight >= 70 ? {
                 width: `${valueRight}px`,
                 height: "8px",
-                borderColor: 'green',
+                borderColor: 'lightgreen',
                 borderWidth: "1px", 
                 borderStyle: "solid",
-                background: ' green'
+                background: 'lightgreen'
             } : {
                 width: `${valueRight}px`,
                 height: "8px",
@@ -69,6 +69,9 @@ export function DriverProfileDataRow({lp, title, valueLeft, valueRight, levelOne
                 color: 'red',
                 background: 'darkred'
             }}>{levelThree?'':'O'}</td>
+            <td>
+                <img src={url} alt="image placeholder" style={{maxHeight: "100px", maxWidth: "150px"}}/>
+            </td>
         </tr>
     )
 }
